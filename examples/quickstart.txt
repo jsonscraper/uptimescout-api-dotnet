@@ -1,0 +1,3 @@
+using UptimeScout;
+using var client=new Client(Environment.GetEnvironmentVariable("UPTIMESCOUT_LICENSE_KEY")!);
+Console.WriteLine(await client.RequestAsync("status",new Dictionary<string,string>{{"service","github"}}));
